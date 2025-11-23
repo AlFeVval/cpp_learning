@@ -17,7 +17,7 @@ class Stack{
 
     uint64_t pop(){
       if (isEmpty()) throw std::underflow_error("Stack empty");
-      return arr[--top];
+      return arr[top--];
     }
 
     uint64_t peek(){
@@ -27,5 +27,5 @@ class Stack{
 
     bool isEmpty() const { return top == -1; };
     bool isFull() const { return top == MAX_SIZE-1; };
-    size_t isFull() const { return top+1; };
+    size_t size() const { return top+1; };
 };
